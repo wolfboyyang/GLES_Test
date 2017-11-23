@@ -19,6 +19,11 @@ class MainActivity : Activity() {
             val intent = Intent(this, TriangleActivity::class.java)
             startActivity(intent)
         }
+
+        btn_drawRect.setOnClickListener {
+            val intent = Intent(this, RectActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     /**

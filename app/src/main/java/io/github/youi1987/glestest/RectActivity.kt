@@ -3,22 +3,22 @@ package io.github.youi1987.glestest
 import android.app.Activity
 import android.os.Bundle
 
-class TriangleActivity : Activity() {
-    private lateinit var triangleView: TriangleView
+class RectActivity : Activity() {
+    private lateinit var rectView: RectView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        triangleView = TriangleView(this)
-        setContentView(triangleView)
+        rectView = RectView(this)
+        setContentView(rectView)
     }
 
     override fun onPause() {
         super.onPause()
-        triangleView.onPause()
+        rectView.onPause()
     }
 
     override fun onResume() {
         super.onResume()
-        triangleView.onResume()
+        rectView.onResume()
     }
 }

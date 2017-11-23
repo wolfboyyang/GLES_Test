@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".TriangleActivity" android:theme="@style/NoActionBar"/>
+        <activity android:name=".RectActivity" android:theme="@style/NoActionBar"/>
 
     </application>
 

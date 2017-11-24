@@ -57,9 +57,13 @@ const Vertex QUAD[4] = {
 class Renderer {
 public:
     bool init();
+
     Renderer();
+
     ~Renderer();
+
     void resize(int w, int h);
+
     void render();
 
 private:
@@ -73,10 +77,15 @@ private:
     GLuint mProgram;
     GLuint mVB[VB_COUNT];
     GLuint mVBState;
+
     float *mapTransformBuf();
+
     void unmapTransformBuf();
+
     void draw();
+
     void calcSceneParams(int w, int h);
+
     void step();
 };
 
@@ -219,7 +228,7 @@ JNIEXPORT jboolean JNICALL
 Java_io_github_youi1987_glestest_RectView_init(JNIEnv *env, jobject obj);
 JNIEXPORT void JNICALL
 Java_io_github_youi1987_glestest_RectView_resize(JNIEnv *env, jobject obj, jint width,
-                                                     jint height);
+                                                 jint height);
 JNIEXPORT void JNICALL Java_io_github_youi1987_glestest_RectView_step(JNIEnv *env, jobject obj);
 JNIEXPORT void JNICALL Java_io_github_youi1987_glestest_RectView_destroy(JNIEnv *env, jobject obj);
 }
@@ -238,7 +247,7 @@ Java_io_github_youi1987_glestest_RectView_init(JNIEnv *env, jobject obj) {
 
 JNIEXPORT void JNICALL
 Java_io_github_youi1987_glestest_RectView_resize(JNIEnv *env, jobject obj, jint width,
-                                                     jint height) {
+                                                 jint height) {
     if (g_renderer) {
         g_renderer->resize(width, height);
     }

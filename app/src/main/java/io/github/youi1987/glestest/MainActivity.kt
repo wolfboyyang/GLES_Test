@@ -24,6 +24,11 @@ class MainActivity : Activity() {
             val intent = Intent(this, RectActivity::class.java)
             startActivity(intent)
         }
+
+        btn_drawCube.setOnClickListener {
+            val intent = Intent(this, CubeActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     /**
